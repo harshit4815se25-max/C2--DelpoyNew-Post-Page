@@ -1,0 +1,13 @@
+# Netlify build settings for DEV@Deakin (Vite + React)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page app fallback: any path serves index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
